@@ -1,0 +1,54 @@
+
+.wrap-toggle{
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.wrap-toggle span{
+    font-size: 1.2rem;
+    color: var(--Light-Grayish-Blue);
+}
+/*-----switch toggle-------*/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    
+  }
+.slider{
+    position: absolute ;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:linear-gradient(to right,hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+    border-radius: 34px;
+    
+}
+.slider::before{
+    position:absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left:4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: .3s;
+}
+.slider:hover{
+    background-image:linear-gradient(to right,hsl(236, 72%, 79%,0.5),hsl(237, 63%, 64%,0.5));
+}
+input:checked + .slider:before {
+    transform: translateX(26px);
+}

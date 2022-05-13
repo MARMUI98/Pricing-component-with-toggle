@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+:root {
+    --Very-Light-Grayish-Blue: hsl(240, 78%, 98%);
+    --Light-Grayish-Blue: hsl(234, 14%, 74%);
+    --Grayish-Blue: hsl(233, 13%, 49%);
+    --Dark-Grayish-Blue: hsl(232, 13%, 33%);
+    --primery-color: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    background-color: var(--Very-Light-Grayish-Blue);
+}
+.container {
+    background: url(/images/bg-bottom.svg), url(/images/bg-top.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: left bottom, right top;
+    
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: var(--Grayish-Blue);
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+/* Pricing */
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--Grayish-Blue);
+
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 40px;
+    text-align: center;
+    justify-items: space-between;
+    width: 400px;
+    height: auto;
+    border-radius: 15px;
+}
+
+hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+.wrap_price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.price {
+    color: var(--Dark-Grayish-Blue);
+    font-size: 5rem;
+    margin-left: 10px;
+}
+
+.dollar {
+    color: var(--Dark-Grayish-Blue);
+    font-size: 3rem;
+}
+
+p {
+    font-size: 1.1rem;
+    margin: 18px auto;
+}
+
+a {
+    font-size: 14px;
+    text-decoration: none;
+    background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color: white;
+    padding: 15px;
+    margin-top: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 8px;
+    border: 1px solid white;
+}
+
+a:hover {
+    background: rgba(255, 255, 255, 1);
+
+    color: hsl(237, 63%, 64%);
+    border: 1px solid hsl(237, 63%, 64%);
+}
+
+/* pro price */
+
+.pro {
+    background-image: linear-gradient(to bottom, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color: var(--Very-Light-Grayish-Blue);
+    height: 550px;
+    padding: 65px 40px;
+
+}
+
+.pro p {
+    color: var(--Very-Light-Grayish-Blue);
+}
+
+.pro hr {
+    border: 0;
+    height: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.pro .price {
+    color: var(--Very-Light-Grayish-Blue);
+}
+
+.pro .dollar {
+    color: var(--Very-Light-Grayish-Blue);
+    font-size: 3.5rem;
+}
+
+.pro a {
+    background-image: none;
+    background-color: white;
+    color: hsl(237, 63%, 64%);
+
+}
+
+.pro a:hover {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+@media only screen and (max-width: 960px){
+    body{
+        display: flex;
+        justify-content: center;
+       /* align-items: center;  */
+    }
+    .container{
+        height: auto;
+        width: 375px;
+        background: url(/images/bg-top.svg);
+        background-position:200px -50px;
+        background-repeat: no-repeat;
+    
+    }
+    header{
+        margin-top: 50px;
+    }
+    main{
+        flex-direction: column;
+    }
+    section{
+        margin: 0 30px 30px 30px;
+        width: 330px; 
+        padding: 30px;
+    }
+    h2 {
+        font-size: 1.3rem;
+    }
+    .pro{
+        height: auto;
+        padding: 40px;
+    }
+    .price {
+        font-size: 4rem;
+    }
+    .dollar{
+        font-size: 2.5rem;
+    }
+    p{
+        margin: 13px auto;
+    }
+    a {
+        margin-top: 30px;
+    }
+}
